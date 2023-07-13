@@ -1,0 +1,78 @@
+.container {
+	width: 600px;
+	background-color: #eeeded;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 10px;
+	color: gray;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.darkContainer {
+	background-color: rgb(59, 44, 119);
+	color: #FFF;
+}
+
+.darkContainer input {
+	background-color: rgb(124, 124, 196);
+	color: rgb(224, 215, 215);
+}
+
+.darkContainer textarea {
+	background-color: rgb(124, 124, 196);
+	color: rgb(224, 215, 215);
+}
+
+.container form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container input {
+	width: 250px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+}
+
+.container textarea {
+	margin-top: 5px;
+	width: 250px;
+	height: 100px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	resize: none;
+	border-radius: 10px;
+}
+
+.container button {
+	padding: 10px;
+	color: #fff;
+	margin: 5px;
+	outline: none;
+	width: 90px;
+	cursor: pointer;
+	height:40px;
+	font-size: 17px;
+	border: none;
+	padding: 5px;
+	background-color: seagreen;
+	border-radius: 20px;
+}
+
+.container button:hover {
+	background-color: rgb(21, 199, 98);
+}
+
+@media (max-width:650px) {
+	.container {
+		width: 100%;
+	}
+}

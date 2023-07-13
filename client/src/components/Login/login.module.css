@@ -1,0 +1,107 @@
+.container {
+	background-color: #eeeded;
+	padding: 40px;
+	margin: 5px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.darkContainer {
+	background-color: rgb(59, 44, 119);
+	color: rgb(224, 215, 215);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+	width:300px;
+margin: 5px 0 8px 0;
+padding: 8px;
+border: none;
+outline: none;
+border-radius: 5px;
+}
+
+label {
+	width: 120px;
+	font-size: 14px;
+	color: rgb(94, 90, 90);
+}
+
+.darkContainer label {
+	color: #fff;
+}
+
+.inputContainer {
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #dbdbdb;
+	padding: 3px 8px;
+	margin: 2px;
+	border-radius: 5px;
+}
+
+.darkContainer .inputContainer {
+	background-color: rgb(22, 13, 58);
+}
+
+button {
+	width:50%;
+	margin: 5px;
+	padding: 15px 5px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	background-color: rgb(5, 104, 91);
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgb(10, 141, 124);
+}
+
+.darkContainer button {
+	background-color: rgb(22, 13, 58);
+}
+
+.darkContainer button:hover {
+	background-color: rgb(37, 23, 94);
+}
+
+.success {
+	color: #FFF;
+	background-color: rgb(30, 211, 30);
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 4px;
+}
+
+.error {
+	font-size: 13px;
+	color: #FFF;
+	background-color: rgb(211, 22, 22);
+	padding: 2px 3px;
+	border-radius: 5px;
+	margin: 1px;
+}
+
+@media (max-width:430px) {
+	input {
+		width:100%;
+	}
+	.inputContainer {
+		width: 250px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

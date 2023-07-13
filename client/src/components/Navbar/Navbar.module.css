@@ -1,0 +1,186 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #9e9e9e;
+	padding: 0 50px;
+}
+
+.darkHeader {
+background-color: rgb(37, 24, 88);
+}
+
+.list {
+	display: flex;
+	list-style: none;
+}
+
+.list .link {
+	padding: 15px;
+	color: #FFF;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.3s ease-in;
+}
+
+.list .link:hover{
+	color: #30c0e4;
+}
+
+.register {
+	color: #FFF;
+	margin: 0 4px 0 0;
+}
+
+.login {
+	color: #FFF;
+	margin: 0 4px 0 2px;
+}
+
+.register:hover,.login:hover{
+	color: #30c0e4;
+}
+
+.Separator {
+	color: #fff;
+}
+
+.hiUser {
+	background-color: rgba(18, 243, 194, 0.705);
+	color: #FFF;
+	padding: 2px 3px;
+	border-radius: 4px;
+	margin-right: 3px;
+}
+
+.logOut {
+	background-color: rgba(151, 153, 5, 0.705);
+	color: #FFF;
+	padding: 2px 3px;
+	border-radius: 4px;
+	margin-right: 3px;
+	font-size: 12px;
+	cursor: pointer;
+	margin-top: 2px;
+}
+
+.logOut:hover {
+	background-color: rgba(179, 182, 11, 0.705);
+}
+
+.hamburger__menu {
+  width: 40px;
+  height: 40px;
+  display: none;
+  justify-content: center;
+
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu__line {
+  position: relative;
+  transition: all 100ms ease-in;
+  width: 30px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: #30c0e4;
+  transition: all 200ms ease-in;
+}
+
+.menu__line::before,
+.menu__line::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: #30c0e4;
+  transition: all 200ms ease-in;
+}
+
+.menu__line::after {
+  top: auto;
+  bottom: 10px;
+}
+
+.hamburgerOpen .menu__line {
+  background-color: transparent;
+}
+
+.hamburgerOpen .menu__line::before {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.hamburgerOpen .menu__line::after {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.right {
+	display: flex;
+	align-items: center;
+}
+
+.right img{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+
+.right .darkModeBtn {
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	transition: all 0.3s ease-in;
+	border: 2px solid #30c0e4;
+	background-color: #9e9e9e;
+	border-radius: 50%;
+}
+
+.userLogin {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.profile {
+	width: 35px !important;
+	height: 35px !important;
+	padding: 1px !important;
+	border-radius: 50%;
+	background-color: #0fcd38;
+	margin-right: 2px;
+}
+
+@media (max-width:768px) {
+	.list {
+		z-index: 15;
+		width: 100%;
+		height: 100vh;
+		flex-direction: column;
+		background-color: #30c0e4;
+		position: fixed;
+		top: 50px;
+		left: -100%;
+		transition: all 0.3s ease-in;
+	}
+
+	.darkHamburger {
+		background-color: rgb(30, 20, 70);
+		color: #FFF;
+	}
+
+	.list li:hover{
+		background-color: #FFF;
+	}
+
+	.listOpenHamburger {
+		left: 0px;
+	}
+
+	.hamburger__menu {
+		display: flex;
+	}
+}

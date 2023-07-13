@@ -1,0 +1,10 @@
+.container {
+	background-color: #252323;
+	padding: 10px;
+}
+
+.container p {
+text-align: center;
+font-size: 14px;
+color: rgb(105, 102, 102);
+}

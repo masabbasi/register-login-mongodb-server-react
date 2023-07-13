@@ -1,0 +1,29 @@
+.detail	{
+	height:80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.detail h1 {
+	background-color: #eeeded;
+	color: black;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.darkContainer h1 {
+		background-color: rgb(59, 44, 119);
+		color: #FFF;
+	}
+
+	.back {
+		margin-top: 5px;
+		background-color: rgb(58, 58, 228);
+		color: #FFF;
+		padding: 3px;
+		border-radius: 5px;
+		cursor: pointer;
+	}

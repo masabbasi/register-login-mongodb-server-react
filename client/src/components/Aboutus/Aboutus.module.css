@@ -1,0 +1,25 @@
+.container {
+	background-color: #eeeded;
+	padding: 20px;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+.darkContainer {
+	background-color: rgb(59, 44, 119);
+	color: rgb(224, 215, 215);
+}
+
+.container p {
+	width: 80%;
+	margin: 0 auto;
+	font-size: 20px;
+	line-height: 2;
+	text-align: justify;
+}
+
+@media (max-width:620px) {
+	.container p {
+		width: 95%;
+	}
+}
