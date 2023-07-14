@@ -9,6 +9,7 @@ export const registerUser = async (userData, setRegisterError) => {
     const user = await axios.post(`${url}/register`, userData, header);
     return user;
   } catch (err) {
+		console.log(err);
     setRegisterError(err?.response?.data);
   }
 };
