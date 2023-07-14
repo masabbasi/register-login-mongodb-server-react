@@ -40,6 +40,7 @@ const takeUser = async()=>{
 
 	const logOut = async ()=>{
 const user = await logOutUser();
+console.log(user);
 if (user.statusText	=== "OK") {
 	setUserInfo({});
 }
