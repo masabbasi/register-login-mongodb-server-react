@@ -116,6 +116,9 @@ const Register = ({ toggelDarkMode }) => {
               {uploading}
             </button>
           </div>
+					{registerError?.hasOwnProperty("pic") && (
+            <p className={styles.error}>{registerError.pic}</p>
+          )}
           <button className={styles.signUp} disabled={disable?true:false} type="submit">Sign Up</button>
         </form>
       </div>
