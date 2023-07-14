@@ -106,7 +106,7 @@ console.log("user info" , userInfo);
         </div>
       </div>
       <div className={styles.right}>
-        {userInfo.username?
+        {userInfo?.username?
 				<>
 				<img className={styles.profile} src={userInfo.pic} alt="" />
 				<div className={styles.userLogin}>
