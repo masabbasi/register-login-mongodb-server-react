@@ -58,35 +58,35 @@ if (user.statusText	=== "OK") {
           <Link
             onClick={closeMenuHandler}
             className={styles.link}
-            to="/register-login-mongodb-server-react/"
+            to="/"
           >
             Home
           </Link>
           <Link
             onClick={closeMenuHandler}
             className={styles.link}
-            to="/register-login-mongodb-server-react/products"
+            to="/products"
           >
             Products
           </Link>
           <Link
             onClick={closeMenuHandler}
             className={styles.link}
-            to="/register-login-mongodb-server-react/aboutus"
+            to="/aboutus"
           >
             About US
           </Link>
           <Link
             onClick={closeMenuHandler}
             className={styles.link}
-            to="/register-login-mongodb-server-react/blog"
+            to="/blog"
           >
             Blog
           </Link>
           <Link
             onClick={closeMenuHandler}
             className={styles.link}
-            to="/register-login-mongodb-server-react/contactus"
+            to="/contactus"
           >
             Contact Us
           </Link>
@@ -112,14 +112,14 @@ if (user.statusText	=== "OK") {
           : (<>
               <Link
                 className={styles.register}
-                to="/register-login-mongodb-server-react/register"
+                to="/register"
               >
                 Register
               </Link>
    <span className={styles.Separator}>/</span>
               <Link
                 className={styles.login}
-                to="/register-login-mongodb-server-react/login"
+                to="/login"
               >
                 Login
               </Link>

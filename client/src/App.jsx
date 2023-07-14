@@ -24,31 +24,31 @@ function App() {
         />
         <Routes>
           <Route
-            path="/register-login-mongodb-server-react/"
+            path="/"
             element={<Home toggelDarkMode={toggelDarkMode} />}
           />
           <Route
-					path="/register-login-mongodb-server-react/products"
+					path="/products"
             element={<Products toggelDarkMode={toggelDarkMode} />}
           />
           <Route
-            path="/register-login-mongodb-server-react/aboutus"
+            path="/aboutus"
             element={<Aboutus toggelDarkMode={toggelDarkMode} />}
           />
           <Route
-            path="/register-login-mongodb-server-react/blog"
+            path="/blog"
             element={<Blog toggelDarkMode={toggelDarkMode} />}
           />
           <Route
-            path="/register-login-mongodb-server-react/contactus"
+            path="/contactus"
             element={<Contactus toggelDarkMode={toggelDarkMode} />}
           />
 					          <Route
-            path="register-login-mongodb-server-react/register"
+            path="/register"
             element={<Register toggelDarkMode={toggelDarkMode} />}
           />
 					          <Route
-            path="/register-login-mongodb-server-react/login"
+            path="login"
             element={<Login toggelDarkMode={toggelDarkMode} />}
           />
           <Route
@@ -56,7 +56,7 @@ function App() {
             element={<Page404 toggelDarkMode={toggelDarkMode} />}
           />
           <Route
-            path="/register-login-mongodb-server-react/detail/:id"
+            path="/detail/:id"
             element={<Detail toggelDarkMode={toggelDarkMode} />}
           />
         </Routes>

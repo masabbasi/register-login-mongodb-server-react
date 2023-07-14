@@ -23,7 +23,7 @@ const Register = ({ toggelDarkMode }) => {
     if (user.data) {
       setRegisterFlag(true);
       setTimeout(() => {
-        navigate("/register-login-mongodb-server-react/login");
+        navigate("/login");
       }, 2000);
     }
   };

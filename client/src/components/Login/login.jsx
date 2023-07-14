@@ -24,7 +24,7 @@ const Login = ({ toggelDarkMode }) => {
 			// localStorage.setItem("userLogin",JSON.stringify(user.data))
 			setUserInfo(user?.data)
 			setTimeout(()=>{
-				navigate("/register-login-mongodb-server-react/")
+				navigate("/")
 			},2000)
 		}
   };
