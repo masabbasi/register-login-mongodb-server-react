@@ -1,6 +1,6 @@
 .container {
 	background-color: #eeeded;
-	padding: 40px;
+	padding: 40px 10px;
 	margin: 5px;
 	border-radius: 10px;
 	display: flex;
