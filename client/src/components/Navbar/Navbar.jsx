@@ -103,7 +103,7 @@ if (user.status	=== 200) {
         </div>
       </div>
       <div className={styles.right}>
-        {userInfo?
+        {userInfo.username?
 				<>
 				<img className={styles.profile} src={userInfo.pic} alt="" />
 				<div className={styles.userLogin}>
