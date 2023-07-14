@@ -39,6 +39,7 @@ const takeUser = async()=>{
   }, []);
 
 	const logOut = async ()=>{
+		console.log("Hiiiiiiiiiiiii");
 const user = await logOutUser();
 console.log(user);
 if (user.statusText	=== "OK") {
