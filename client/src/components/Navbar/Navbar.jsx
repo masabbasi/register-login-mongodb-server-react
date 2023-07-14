@@ -42,8 +42,10 @@ const takeUser = async()=>{
 		console.log("Hiiiiiiiiiiiii");
 const user = await logOutUser();
 console.log(user);
+console.log(userInfo);
 if (user.status	=== 200) {
 	setUserInfo({});
+	console.log(userInfo);
 }
 	}
 
