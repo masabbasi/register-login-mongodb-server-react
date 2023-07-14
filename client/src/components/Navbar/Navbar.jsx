@@ -89,7 +89,7 @@ const Navbar = ({ toggelDarkMode, setToggelDarkMode }) => {
       <div className={styles.right}>
         {userInfo?.username ? (
           <>
-            <img className={styles.profile} src={userInfo.pic} alt="" />
+            <img className={styles.profile} src={userInfo?.pic?userInfo.pic:"./images/profile.png"} alt="" />
             <div className={styles.userLogin}>
               <p className={styles.hiUser}>Hi {userInfo.username}</p>
               <span className={styles.logOut} onClick={logOut}>
