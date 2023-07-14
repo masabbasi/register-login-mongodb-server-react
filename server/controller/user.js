@@ -49,6 +49,7 @@ const loginUser = async (req, res) => {
         .cookie("userToken", userToken, {
           secure: "false",
           sameSite: "none",
+          // httpOnly: true,
         })
         .json({
           id: user._id,
@@ -67,9 +68,10 @@ const loginUser = async (req, res) => {
 const profileUser = async (req, res) => {
   try {
     const { userToken } = req.cookies;
-
-    const user = await jwt.verify(userToken, process.env.JWT_SECRET, {});
-    return res.status(200).json(user);
+    if (userToken) {
+      const user = await jwt.verify(userToken, process.env.JWT_SECRET, {});
+      return res.status(200).json(user);
+    }
   } catch (err) {
     console.log("profile user err", err);
   }
@@ -77,7 +79,15 @@ const profileUser = async (req, res) => {
 
 const logoutUser = async (req, res) => {
   try {
-    return res.cookie("userToken", "").status(200).json("user is logout");
+    return res
+      .cookie("userToken", "", {
+        maxAge: 0,
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+      })
+      .status(200)
+      .json("user is logout");
   } catch (err) {
     console.log("logout controll err", err);
   }

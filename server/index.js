@@ -12,8 +12,8 @@ app.use(cookieParser());
 //*cors
 app.use(
   cors({
+    origin: "https://clinetlogintutorial.vercel.app",
     credentials: true,
-    origin: "http://localhost:5173",
   })
 );
 //*mongod db connection
@@ -24,7 +24,9 @@ app.use("/home", async (req, res) => {
 });
 
 app.use("/", require("./routes/user"));
-
+// app.use("/", (req, res) => {
+//   return res.status(200).json("Server Is Run");
+// });
 //*listen
 const port = process.env.PORT || 3010;
 app.listen(port, () => {
