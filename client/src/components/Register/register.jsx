@@ -16,6 +16,7 @@ const Register = ({ toggelDarkMode }) => {
   const [registerError, setRegisterError] = useState({});
   const [registerFlag, setRegisterFlag] = useState(false);
 	const [disable,setDisable] = useState(false);
+	const [uploading,setUploading] = useState("Upload Profile!");
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -42,10 +43,12 @@ const Register = ({ toggelDarkMode }) => {
 
   const uploadHandler = async () => {
 		setDisable(true);
+		setUploading("Uploading");
     const res = await uploadProfile(registerValues.pic);
     if (res.statusText	=== "OK") {
 			setDisable(false);
       setRegisterValues({...registerValues, pic: res.data.secure_url});
+			setUploading("Upload Complated!");
     }
   };
 
@@ -110,7 +113,7 @@ const Register = ({ toggelDarkMode }) => {
               placeholder="Confirm Password"
             />
             <button className={styles.uploadBtn} type="button" onClick={uploadHandler}>
-              Upload Profile
+              {uploading}
             </button>
           </div>
           <button className={styles.signUp} disabled={disable?true:false} type="submit">Sign Up</button>
