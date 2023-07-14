@@ -43,7 +43,7 @@ const Register = ({ toggelDarkMode }) => {
 
   const uploadHandler = async () => {
 		setDisable(true);
-		setUploading("Uploading");
+		setUploading("Uploading...");
     const res = await uploadProfile(registerValues.pic);
     if (res.statusText	=== "OK") {
 			setDisable(false);
