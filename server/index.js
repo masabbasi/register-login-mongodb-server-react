@@ -12,7 +12,7 @@ app.use(cookieParser());
 //*cors
 app.use(
   cors({
-    origin: "https://clinetlogintutorial.vercel.app",
+    origin: "https://clientloginreact.vercel.app",
     credentials: true,
   })
 );

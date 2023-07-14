@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //Register
-const url = (axios.defaults.baseURL = "http://localhost:2023");
+const url = (axios.defaults.baseURL = "https://serverloginreact.vercel.app");
 axios.defaults.withCredentials = true;
 const header = { headers: { "Content-Type": "application/json" } };
 export const registerUser = async (userData, setRegisterError) => {
