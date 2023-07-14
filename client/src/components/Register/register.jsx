@@ -20,11 +20,9 @@ const Register = ({ toggelDarkMode }) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     const user = await registerUser(registerValues, setRegisterError);
-    if (user.data) {
+    if (user?.data) {
       setRegisterFlag(true);
-      setTimeout(() => {
         navigate("/login");
-      }, 2000);
     }
   };
 

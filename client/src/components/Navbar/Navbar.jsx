@@ -5,8 +5,8 @@ import styles from "./Navbar.module.css";
 import sun from "../../Images/sun.png";
 import moon from "../../Images/moon.png";
 import { Link } from "react-router-dom";
-import {useGlobalContext} from "../../Context/Context.jsx"
-import {profileUser, logOutUser} from "../../API/users.jsx"
+import { useGlobalContext } from "../../Context/Context.jsx";
+import { profileUser, logOutUser } from "../../API/users.jsx";
 
 const Navbar = ({ toggelDarkMode, setToggelDarkMode }) => {
   const [toggelHamburger, setToggelHamburger] = useState(false);
@@ -21,34 +21,23 @@ const Navbar = ({ toggelDarkMode, setToggelDarkMode }) => {
     setToggelHamburger(false);
   };
 
-  // const [user, setUser] = useState({});
-	const {userInfo, setUserInfo} = useGlobalContext();
+  const { userInfo, setUserInfo } = useGlobalContext();
 
-const takeUser = async()=>{
-	const user = await profileUser();
-	setUserInfo(user.data);
-}
+  const takeUser = async () => {
+    const user = await profileUser();
+    setUserInfo(user.data);
+  };
 
   useEffect(() => {
-		takeUser();
-    // if (localStorage.getItem("userLogin") !== undefined) {
-    //   const userLogin = JSON.parse(localStorage.getItem("userLogin"));
-    //   setUser(userLogin);
-    // }
-		// setUser(userLogin);
+    takeUser();
   }, []);
 
-	const logOut = async ()=>{
-		console.log("Hiiiiiiiiiiiii");
-const user = await logOutUser();
-console.log(user);
-console.log(userInfo);
-if (user.status	=== 200) {
-	setUserInfo({});
-	console.log(userInfo);
-}
-}
-console.log("user info" , userInfo);
+  const logOut = async () => {
+    const user = await logOutUser();
+    if (user.status === 200) {
+      setUserInfo({});
+    }
+  };
 
   return (
     <header
@@ -60,11 +49,7 @@ console.log("user info" , userInfo);
             toggelHamburger && styles.listOpenHamburger
           } ${toggelDarkMode && styles.darkHamburger}`}
         >
-          <Link
-            onClick={closeMenuHandler}
-            className={styles.link}
-            to="/"
-          >
+          <Link onClick={closeMenuHandler} className={styles.link} to="/">
             Home
           </Link>
           <Link
@@ -81,11 +66,7 @@ console.log("user info" , userInfo);
           >
             About US
           </Link>
-          <Link
-            onClick={closeMenuHandler}
-            className={styles.link}
-            to="/blog"
-          >
+          <Link onClick={closeMenuHandler} className={styles.link} to="/blog">
             Blog
           </Link>
           <Link
@@ -106,31 +87,27 @@ console.log("user info" , userInfo);
         </div>
       </div>
       <div className={styles.right}>
-        {userInfo?.username?
-				<>
-				<img className={styles.profile} src={userInfo.pic} alt="" />
-				<div className={styles.userLogin}>
-				<p className={styles.hiUser}>Hi {userInfo.username}</p>
-				<span className={styles.logOut} onClick={logOut}>LogOut</span>
-				</div>
-				</>
-          : (<>
-              <Link
-                className={styles.register}
-                to="/register"
-              >
-                Register
-              </Link>
-   <span className={styles.Separator}>/</span>
-              <Link
-                className={styles.login}
-                to="/login"
-              >
-                Login
-              </Link>
-							</>
-				
-            )}
+        {userInfo?.username ? (
+          <>
+            <img className={styles.profile} src={userInfo.pic} alt="" />
+            <div className={styles.userLogin}>
+              <p className={styles.hiUser}>Hi {userInfo.username}</p>
+              <span className={styles.logOut} onClick={logOut}>
+                LogOut
+              </span>
+            </div>
+          </>
+        ) : (
+          <>
+            <Link className={styles.register} to="/register">
+              Register
+            </Link>
+            <span className={styles.Separator}>/</span>
+            <Link className={styles.login} to="/login">
+              Login
+            </Link>
+          </>
+        )}
 
         <img
           src={toggelDarkMode ? sun : moon}

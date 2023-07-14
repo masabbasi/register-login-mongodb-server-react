@@ -21,11 +21,8 @@ const Login = ({ toggelDarkMode }) => {
     const user = await loginUser(loginValues, setLoginError);
 		if (user?.status===200) {
 			setLoginFlag(true);
-			// localStorage.setItem("userLogin",JSON.stringify(user.data))
 			setUserInfo(user?.data)
-			setTimeout(()=>{
 				navigate("/")
-			},2000)
 		}
   };
 
