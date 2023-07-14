@@ -26,7 +26,7 @@ export const loginUser = async (userData, setLoginError) => {
 //Profile User
 export const profileUser = async () => {
   try {
-    const user = await axios.post(`${url}/profile`);
+    const user = await axios.get(`${url}/profile`);
     return user;
   } catch (err) {
     return err;
