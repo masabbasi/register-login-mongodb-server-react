@@ -73,7 +73,7 @@ const Register = ({ toggelDarkMode }) => {
               placeholder="UserName"
             />
           </div>
-          {registerError.hasOwnProperty("username") && (
+          {registerError?.hasOwnProperty("username") && (
             <p className={styles.error}>{registerError.username}</p>
           )}
           <div className={styles.inputContainer}>
@@ -86,7 +86,7 @@ const Register = ({ toggelDarkMode }) => {
               placeholder="Password"
             />
           </div>
-          {registerError.hasOwnProperty("password") && (
+          {registerError?.hasOwnProperty("password") && (
             <p className={styles.error}>{registerError.password}</p>
           )}
           <div className={styles.inputContainer}>
@@ -99,7 +99,7 @@ const Register = ({ toggelDarkMode }) => {
               placeholder="confirmPassword"
             />
           </div>
-          {registerError.hasOwnProperty("confirmPassword") && (
+          {registerError?.hasOwnProperty("confirmPassword") && (
             <p className={styles.error}>{registerError.confirmPassword}</p>
           )}
           <div className={styles.inputContainer}>
