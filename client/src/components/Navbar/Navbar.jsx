@@ -47,7 +47,8 @@ if (user.status	=== 200) {
 	setUserInfo({});
 	console.log(userInfo);
 }
-	}
+}
+console.log("user info" , userInfo);
 
   return (
     <header
