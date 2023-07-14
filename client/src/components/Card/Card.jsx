@@ -16,7 +16,7 @@ const Card = ({ id, image, title, description, toggelDarkMode }) => {
       <p>
         {description}
         <Link
-          to={`/register-login-mongodb-server-react/detail/${id}`}
+          to={`/detail/${id}`}
           className={styles.more}
         >
           See More
