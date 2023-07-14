@@ -10,7 +10,7 @@ const Register = ({ toggelDarkMode }) => {
     username: "",
     password: "",
     confirmPassword: "",
-    pic: {},
+    pic: "",
   });
 
   const [registerError, setRegisterError] = useState({});
