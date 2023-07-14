@@ -19,7 +19,7 @@ const Login = ({ toggelDarkMode }) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     const user = await loginUser(loginValues, setLoginError);
-		if (user) {
+		if (user?.status===200) {
 			setLoginFlag(true);
 			// localStorage.setItem("userLogin",JSON.stringify(user.data))
 			setUserInfo(user?.data)
